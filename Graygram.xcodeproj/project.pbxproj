@@ -21,6 +21,10 @@
 		BD4C53081E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53071E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift */; };
 		BD4C53AD1E6D7B2100C9C4B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53AC1E6D7B2100C9C4B7 /* LoginViewController.swift */; };
 		BD4C53AF1E6D96D500C9C4B7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53AE1E6D96D500C9C4B7 /* SplashViewController.swift */; };
+		BDB33A721E7EB38800EF6AB4 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */; };
+		BDB33A741E7EB47600EF6AB4 /* PostEditorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */; };
+		BDB33A761E7EB60D00EF6AB4 /* PostEditorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */; };
+		BDB33A781E7EB85900EF6AB4 /* String+BoundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		BD4C53071E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionActivityIndicatorView.swift; sourceTree = "<group>"; };
 		BD4C53AC1E6D7B2100C9C4B7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BD4C53AE1E6D96D500C9C4B7 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
+		BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorImageCell.swift; sourceTree = "<group>"; };
+		BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorMessageCell.swift; sourceTree = "<group>"; };
+		BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BoundingRect.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,10 @@
 				BD4C516C1E5DA96000C9C4B7 /* LaunchScreen.storyboard */,
 				BD4C516F1E5DA96000C9C4B7 /* Info.plist */,
 				BD4C51751E5DB7C000C9C4B7 /* Post.swift */,
+				BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */,
+				BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */,
+				BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */,
+				BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */,
 			);
 			path = Graygram;
 			sourceTree = "<group>";
@@ -235,13 +247,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0FA84C1E76BE49001C782E /* UIImage+Grayscaled.swift in Sources */,
+				BDB33A741E7EB47600EF6AB4 /* PostEditorImageCell.swift in Sources */,
 				BD4C53AD1E6D7B2100C9C4B7 /* LoginViewController.swift in Sources */,
 				BD4C51761E5DB7C000C9C4B7 /* Post.swift in Sources */,
 				BD14EB3E1E70443B0016A730 /* MainTabBarController.swift in Sources */,
 				BD4C53081E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift in Sources */,
+				BDB33A721E7EB38800EF6AB4 /* PostEditorViewController.swift in Sources */,
+				BDB33A781E7EB85900EF6AB4 /* String+BoundingRect.swift in Sources */,
 				BD4C51781E5DBE2000C9C4B7 /* PostCardCell.swift in Sources */,
 				BD4C51661E5DA96000C9C4B7 /* FeedViewController.swift in Sources */,
 				BD4C517A1E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
+				BDB33A761E7EB60D00EF6AB4 /* PostEditorMessageCell.swift in Sources */,
 				BD4C51641E5DA96000C9C4B7 /* AppDelegate.swift in Sources */,
 				BD0FA84E1E76C52A001C782E /* CropViewController.swift in Sources */,
 				BD4C53AF1E6D96D500C9C4B7 /* SplashViewController.swift in Sources */,

@@ -10,6 +10,10 @@ import UIKit
 
 final class CropViewController: UIViewController {
   
+  // MARK: Properties
+  
+  var didFinishCropping:  ((UIImage) -> Void)?
+  
   fileprivate let scrollView = UIScrollView()
   fileprivate let imageView = UIImageView()
   
@@ -150,7 +154,7 @@ final class CropViewController: UIViewController {
     
     if let croppedCGImage = image.cgImage?.cropping(to: rect) {
       let croppedImage = UIImage(cgImage: croppedCGImage)
-      print(croppedImage)
+      self.didFinishCropping?(croppedImage)
     }
     
     // UIView.convert(CGRect, from:)

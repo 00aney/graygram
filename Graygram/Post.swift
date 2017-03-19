@@ -47,6 +47,9 @@ extension Notification.Name {
   
   /// Post에 좋아요를 취소할 때 발송되는 노티피케이션입니다. userInfo에 ["postID": Post.id] 값이 필요합니다.
   static var postDidUnlike: Notification.Name { return .init("postDidUnlike") }
+  
+  /// 새로운 `Post`가 생성되었을 경우 발생하는 노티피케이션입니다. `userInfo`에 `post: Post`가 전달됩니다.
+  static var postDidCreate: Notification.Name { return .init("postDidCreate") }
 }
 
 //Cf. 수열님이 컨트리뷰트한 프로토콜

@@ -76,6 +76,8 @@ class FeedViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(postDidLike), name: .postDidLike, object: nil)
     
     NotificationCenter.default.addObserver(self, selector: #selector(postDidUnlike), name: .postDidUnlike, object: nil)
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(postDidCreate), name: .postDidCreate, object: nil)
 	}
   
   deinit {
@@ -167,6 +169,12 @@ class FeedViewController: UIViewController {
     }
   }
   
+  func postDidCreate(notification: Notification) {
+    guard let post = notification.userInfo?["post"] as? Post else { return }
+    
+    self.posts.insert(post, at: 0)
+    self.collectionView.reloadData()
+  }
 }
 
 
