@@ -21,6 +21,7 @@ final class PostEditorViewController: UIViewController {
   // MARK UI
   
   fileprivate let tableView = UITableView(frame: .zero, style: .grouped)
+  fileprivate let progressView = UIProgressView(frame: .zero)
   
   
   // MARK: Initializing
@@ -37,7 +38,7 @@ final class PostEditorViewController: UIViewController {
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(
       barButtonSystemItem: .done,
       target: self,
-      action: #selector(doneButtonDidTap)
+      action: #selector(doneButtonItemDidTap)
     )
   }
   
@@ -57,12 +58,20 @@ final class PostEditorViewController: UIViewController {
     self.tableView.register(PostEditorImageCell.self, forCellReuseIdentifier: "imageCell")
     self.tableView.register(PostEditorMessageCell.self, forCellReuseIdentifier: "messageCell")
     
+    self.progressView.isHidden = true
+    
     self.tableView.dataSource = self
     self.tableView.delegate = self
     
     self.view.addSubview(self.tableView)
+    self.view.addSubview(self.progressView)
+    
     self.tableView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
+    }
+    self.progressView.snp.makeConstraints { make in
+      make.left.right.equalToSuperview()
+      make.top.equalTo(self.topLayoutGuide.snp.bottom)
     }
     
     NotificationCenter.default.addObserver(
@@ -102,11 +111,13 @@ final class PostEditorViewController: UIViewController {
     _ = self.navigationController?.popViewController(animated: true)
   }
   
-  func doneButtonDidTap() {
+  func doneButtonItemDidTap() {
     let urlString = "https://api.graygram.com/posts"
     let headers: HTTPHeaders = [
       "Accept": "application/json",
     ]
+    
+    self.progressView.isHidden = false
     
     Alamofire.upload(
       multipartFormData: { formData in
@@ -123,7 +134,13 @@ final class PostEditorViewController: UIViewController {
         switch result {
         case .success(let request, _, _):
           print("인코딩 성공")
-          request.responseJSON { response in
+          request // API 요청
+            .uploadProgress { progress in
+              print("\(progress.completedUnitCount) / \(progress.totalUnitCount)")
+              self.progressView.progress = Float(progress.completedUnitCount) / Float(progress.totalUnitCount)
+            }
+            .validate(statusCode: 200..<400)
+            .responseJSON { response in
             switch response.result {
             case .success(let value):
               print("업로드 성공: \(value)")
@@ -138,11 +155,15 @@ final class PostEditorViewController: UIViewController {
 
             case .failure(let error):
               print("업로드 실패: \(error)")
+              self.progressView.isHidden = true
+              self.progressView.progress = 0
             }
           }
           
         case .failure(let error):
           print("인코딩 실패: \(error)")
+          self.progressView.isHidden = true
+          self.progressView.progress = 0
         }
       }
     )
