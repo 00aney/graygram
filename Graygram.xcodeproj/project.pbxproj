@@ -8,48 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		14FF4F9D84C209F12D3380DD /* Pods_Graygram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80498976BF2667ACC640F744 /* Pods_Graygram.framework */; };
-		BD0FA84C1E76BE49001C782E /* UIImage+Grayscaled.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FA84B1E76BE49001C782E /* UIImage+Grayscaled.swift */; };
-		BD0FA84E1E76C52A001C782E /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FA84D1E76C52A001C782E /* CropViewController.swift */; };
-		BD14EB3E1E70443B0016A730 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD14EB3D1E70443B0016A730 /* MainTabBarController.swift */; };
-		BD4C51641E5DA96000C9C4B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C51631E5DA96000C9C4B7 /* AppDelegate.swift */; };
-		BD4C51661E5DA96000C9C4B7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C51651E5DA96000C9C4B7 /* FeedViewController.swift */; };
-		BD4C516B1E5DA96000C9C4B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD4C516A1E5DA96000C9C4B7 /* Assets.xcassets */; };
-		BD4C516E1E5DA96000C9C4B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4C516C1E5DA96000C9C4B7 /* LaunchScreen.storyboard */; };
-		BD4C51761E5DB7C000C9C4B7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C51751E5DB7C000C9C4B7 /* Post.swift */; };
-		BD4C51781E5DBE2000C9C4B7 /* PostCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C51771E5DBE2000C9C4B7 /* PostCardCell.swift */; };
-		BD4C517A1E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C51791E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift */; };
-		BD4C53081E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53071E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift */; };
-		BD4C53AD1E6D7B2100C9C4B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53AC1E6D7B2100C9C4B7 /* LoginViewController.swift */; };
-		BD4C53AF1E6D96D500C9C4B7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C53AE1E6D96D500C9C4B7 /* SplashViewController.swift */; };
-		BDB33A721E7EB38800EF6AB4 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */; };
-		BDB33A741E7EB47600EF6AB4 /* PostEditorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */; };
-		BDB33A761E7EB60D00EF6AB4 /* PostEditorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */; };
-		BDB33A781E7EB85900EF6AB4 /* String+BoundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */; };
+		BD01E3E31E7FF44900561915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD01E3CA1E7FF44900561915 /* Assets.xcassets */; };
+		BD01E3E41E7FF44900561915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD01E3CB1E7FF44900561915 /* LaunchScreen.storyboard */; };
+		BD01E3E51E7FF44900561915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3CE1E7FF44900561915 /* AppDelegate.swift */; };
+		BD01E3E61E7FF44900561915 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D01E7FF44900561915 /* Post.swift */; };
+		BD01E3E71E7FF44900561915 /* String+BoundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D21E7FF44900561915 /* String+BoundingRect.swift */; };
+		BD01E3E81E7FF44900561915 /* UIImage+Grayscaled.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D31E7FF44900561915 /* UIImage+Grayscaled.swift */; };
+		BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D41E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift */; };
+		BD01E3EA1E7FF44900561915 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D61E7FF44900561915 /* CropViewController.swift */; };
+		BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D71E7FF44900561915 /* FeedViewController.swift */; };
+		BD01E3EC1E7FF44900561915 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D81E7FF44900561915 /* LoginViewController.swift */; };
+		BD01E3ED1E7FF44900561915 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3D91E7FF44900561915 /* MainTabBarController.swift */; };
+		BD01E3EE1E7FF44900561915 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DA1E7FF44900561915 /* PostEditorViewController.swift */; };
+		BD01E3EF1E7FF44900561915 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DB1E7FF44900561915 /* SplashViewController.swift */; };
+		BD01E3F01E7FF44900561915 /* CollectionActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DD1E7FF44900561915 /* CollectionActivityIndicatorView.swift */; };
+		BD01E3F11E7FF44900561915 /* PostCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DE1E7FF44900561915 /* PostCardCell.swift */; };
+		BD01E3F21E7FF44900561915 /* PostEditorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DF1E7FF44900561915 /* PostEditorImageCell.swift */; };
+		BD01E3F31E7FF44900561915 /* PostEditorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3E01E7FF44900561915 /* PostEditorMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B86BB9764F4EC6B338F3DF1 /* Pods-Graygram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graygram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graygram/Pods-Graygram.debug.xcconfig"; sourceTree = "<group>"; };
 		1DFF276F1A629FE899D19E8D /* Pods-Graygram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graygram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graygram/Pods-Graygram.release.xcconfig"; sourceTree = "<group>"; };
 		80498976BF2667ACC640F744 /* Pods_Graygram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Graygram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD0FA84B1E76BE49001C782E /* UIImage+Grayscaled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Grayscaled.swift"; sourceTree = "<group>"; };
-		BD0FA84D1E76C52A001C782E /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
-		BD14EB3D1E70443B0016A730 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BD01E3CA1E7FF44900561915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD01E3CC1E7FF44900561915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD01E3CE1E7FF44900561915 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD01E3D01E7FF44900561915 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BD01E3D21E7FF44900561915 /* String+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BoundingRect.swift"; sourceTree = "<group>"; };
+		BD01E3D31E7FF44900561915 /* UIImage+Grayscaled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Grayscaled.swift"; sourceTree = "<group>"; };
+		BD01E3D41E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImageWithPhotoID.swift"; sourceTree = "<group>"; };
+		BD01E3D61E7FF44900561915 /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		BD01E3D71E7FF44900561915 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		BD01E3D81E7FF44900561915 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BD01E3D91E7FF44900561915 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BD01E3DA1E7FF44900561915 /* PostEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
+		BD01E3DB1E7FF44900561915 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BD01E3DD1E7FF44900561915 /* CollectionActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionActivityIndicatorView.swift; sourceTree = "<group>"; };
+		BD01E3DE1E7FF44900561915 /* PostCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCardCell.swift; sourceTree = "<group>"; };
+		BD01E3DF1E7FF44900561915 /* PostEditorImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorImageCell.swift; sourceTree = "<group>"; };
+		BD01E3E01E7FF44900561915 /* PostEditorMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorMessageCell.swift; sourceTree = "<group>"; };
+		BD01E3E21E7FF44900561915 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD4C51601E5DA96000C9C4B7 /* Graygram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graygram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD4C51631E5DA96000C9C4B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD4C51651E5DA96000C9C4B7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		BD4C516A1E5DA96000C9C4B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BD4C516D1E5DA96000C9C4B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BD4C516F1E5DA96000C9C4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD4C51751E5DB7C000C9C4B7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		BD4C51771E5DBE2000C9C4B7 /* PostCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCardCell.swift; sourceTree = "<group>"; };
-		BD4C51791E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImageWithPhotoID.swift"; sourceTree = "<group>"; };
-		BD4C53071E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionActivityIndicatorView.swift; sourceTree = "<group>"; };
-		BD4C53AC1E6D7B2100C9C4B7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BD4C53AE1E6D96D500C9C4B7 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
-		BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorImageCell.swift; sourceTree = "<group>"; };
-		BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorMessageCell.swift; sourceTree = "<group>"; };
-		BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+BoundingRect.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,91 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD01E3C81E7FF44900561915 /* Graygram */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3CD1E7FF44900561915 /* Sources */,
+				BD01E3C91E7FF44900561915 /* Resources */,
+				BD01E3E11E7FF44900561915 /* Supporing Files */,
+			);
+			path = Graygram;
+			sourceTree = "<group>";
+		};
+		BD01E3C91E7FF44900561915 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3CA1E7FF44900561915 /* Assets.xcassets */,
+				BD01E3CB1E7FF44900561915 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD01E3CD1E7FF44900561915 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3CE1E7FF44900561915 /* AppDelegate.swift */,
+				BD01E3CF1E7FF44900561915 /* Models */,
+				BD01E3D51E7FF44900561915 /* ViewControllers */,
+				BD01E3DC1E7FF44900561915 /* Views */,
+				BD01E3D11E7FF44900561915 /* Utils */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BD01E3CF1E7FF44900561915 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3D01E7FF44900561915 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD01E3D11E7FF44900561915 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3D21E7FF44900561915 /* String+BoundingRect.swift */,
+				BD01E3D31E7FF44900561915 /* UIImage+Grayscaled.swift */,
+				BD01E3D41E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BD01E3D51E7FF44900561915 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3D61E7FF44900561915 /* CropViewController.swift */,
+				BD01E3D71E7FF44900561915 /* FeedViewController.swift */,
+				BD01E3D81E7FF44900561915 /* LoginViewController.swift */,
+				BD01E3D91E7FF44900561915 /* MainTabBarController.swift */,
+				BD01E3DA1E7FF44900561915 /* PostEditorViewController.swift */,
+				BD01E3DB1E7FF44900561915 /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD01E3DC1E7FF44900561915 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3DD1E7FF44900561915 /* CollectionActivityIndicatorView.swift */,
+				BD01E3DE1E7FF44900561915 /* PostCardCell.swift */,
+				BD01E3DF1E7FF44900561915 /* PostEditorImageCell.swift */,
+				BD01E3E01E7FF44900561915 /* PostEditorMessageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD01E3E11E7FF44900561915 /* Supporing Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3E21E7FF44900561915 /* Info.plist */,
+			);
+			path = "Supporing Files";
+			sourceTree = "<group>";
+		};
 		BD4C51571E5DA96000C9C4B7 = {
 			isa = PBXGroup;
 			children = (
-				BD4C51621E5DA96000C9C4B7 /* Graygram */,
+				BD01E3C81E7FF44900561915 /* Graygram */,
 				BD4C51611E5DA96000C9C4B7 /* Products */,
 				5C0D0C44FDF12130234E9254 /* Pods */,
 				64BDA351FE34B916166C33F7 /* Frameworks */,
@@ -97,31 +178,6 @@
 				BD4C51601E5DA96000C9C4B7 /* Graygram.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BD4C51621E5DA96000C9C4B7 /* Graygram */ = {
-			isa = PBXGroup;
-			children = (
-				BD4C51631E5DA96000C9C4B7 /* AppDelegate.swift */,
-				BD4C51651E5DA96000C9C4B7 /* FeedViewController.swift */,
-				BD4C53AC1E6D7B2100C9C4B7 /* LoginViewController.swift */,
-				BD4C53AE1E6D96D500C9C4B7 /* SplashViewController.swift */,
-				BD14EB3D1E70443B0016A730 /* MainTabBarController.swift */,
-				BD0FA84D1E76C52A001C782E /* CropViewController.swift */,
-				BD4C51771E5DBE2000C9C4B7 /* PostCardCell.swift */,
-				BD4C53071E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift */,
-				BD4C51791E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift */,
-				BD0FA84B1E76BE49001C782E /* UIImage+Grayscaled.swift */,
-				BD4C516A1E5DA96000C9C4B7 /* Assets.xcassets */,
-				BD4C516C1E5DA96000C9C4B7 /* LaunchScreen.storyboard */,
-				BD4C516F1E5DA96000C9C4B7 /* Info.plist */,
-				BD4C51751E5DB7C000C9C4B7 /* Post.swift */,
-				BDB33A711E7EB38800EF6AB4 /* PostEditorViewController.swift */,
-				BDB33A731E7EB47600EF6AB4 /* PostEditorImageCell.swift */,
-				BDB33A751E7EB60D00EF6AB4 /* PostEditorMessageCell.swift */,
-				BDB33A771E7EB85900EF6AB4 /* String+BoundingRect.swift */,
-			);
-			path = Graygram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4C516E1E5DA96000C9C4B7 /* LaunchScreen.storyboard in Resources */,
-				BD4C516B1E5DA96000C9C4B7 /* Assets.xcassets in Resources */,
+				BD01E3E31E7FF44900561915 /* Assets.xcassets in Resources */,
+				BD01E3E41E7FF44900561915 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,31 +302,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0FA84C1E76BE49001C782E /* UIImage+Grayscaled.swift in Sources */,
-				BDB33A741E7EB47600EF6AB4 /* PostEditorImageCell.swift in Sources */,
-				BD4C53AD1E6D7B2100C9C4B7 /* LoginViewController.swift in Sources */,
-				BD4C51761E5DB7C000C9C4B7 /* Post.swift in Sources */,
-				BD14EB3E1E70443B0016A730 /* MainTabBarController.swift in Sources */,
-				BD4C53081E64566C00C9C4B7 /* CollectionActivityIndicatorView.swift in Sources */,
-				BDB33A721E7EB38800EF6AB4 /* PostEditorViewController.swift in Sources */,
-				BDB33A781E7EB85900EF6AB4 /* String+BoundingRect.swift in Sources */,
-				BD4C51781E5DBE2000C9C4B7 /* PostCardCell.swift in Sources */,
-				BD4C51661E5DA96000C9C4B7 /* FeedViewController.swift in Sources */,
-				BD4C517A1E5DCCFE00C9C4B7 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
-				BDB33A761E7EB60D00EF6AB4 /* PostEditorMessageCell.swift in Sources */,
-				BD4C51641E5DA96000C9C4B7 /* AppDelegate.swift in Sources */,
-				BD0FA84E1E76C52A001C782E /* CropViewController.swift in Sources */,
-				BD4C53AF1E6D96D500C9C4B7 /* SplashViewController.swift in Sources */,
+				BD01E3F21E7FF44900561915 /* PostEditorImageCell.swift in Sources */,
+				BD01E3E51E7FF44900561915 /* AppDelegate.swift in Sources */,
+				BD01E3F01E7FF44900561915 /* CollectionActivityIndicatorView.swift in Sources */,
+				BD01E3F11E7FF44900561915 /* PostCardCell.swift in Sources */,
+				BD01E3EE1E7FF44900561915 /* PostEditorViewController.swift in Sources */,
+				BD01E3E71E7FF44900561915 /* String+BoundingRect.swift in Sources */,
+				BD01E3ED1E7FF44900561915 /* MainTabBarController.swift in Sources */,
+				BD01E3EA1E7FF44900561915 /* CropViewController.swift in Sources */,
+				BD01E3E81E7FF44900561915 /* UIImage+Grayscaled.swift in Sources */,
+				BD01E3EC1E7FF44900561915 /* LoginViewController.swift in Sources */,
+				BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
+				BD01E3E61E7FF44900561915 /* Post.swift in Sources */,
+				BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */,
+				BD01E3EF1E7FF44900561915 /* SplashViewController.swift in Sources */,
+				BD01E3F31E7FF44900561915 /* PostEditorMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BD4C516C1E5DA96000C9C4B7 /* LaunchScreen.storyboard */ = {
+		BD01E3CB1E7FF44900561915 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BD4C516D1E5DA96000C9C4B7 /* Base */,
+				BD01E3CC1E7FF44900561915 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -374,7 +430,7 @@
 			baseConfigurationReference = 1B86BB9764F4EC6B338F3DF1 /* Pods-Graygram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Graygram/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Graygram/Supporing Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aney.Graygram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,7 +443,7 @@
 			baseConfigurationReference = 1DFF276F1A629FE899D19E8D /* Pods-Graygram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Graygram/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Graygram/Supporing Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aney.Graygram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
