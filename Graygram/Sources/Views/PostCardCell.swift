@@ -92,7 +92,7 @@ final class PostCardCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	class func size(width: CGFloat, post: Post) -> CGSize {
+  class func size(width: CGFloat, post: Post, isMessageTrimmed: Bool) -> CGSize {
 		var height: CGFloat = 0
 		
 		// userPhotoView
@@ -110,21 +110,12 @@ final class PostCardCell: UICollectionViewCell {
 		// messageLabel
 		if let message = post.message, !message.isEmpty {
 			height += Metric.messageLabelTop
-			let messageLabelMaxSize = CGSize(
-				width: width - Metric.messageLabelLeft - Metric.messageLabelRight,
-				height: Font.messageLabel.lineHeight * 3
-			)
-			
-			let boundingRect = message.boundingRect(
-				with: messageLabelMaxSize,
-				options: [.usesLineFragmentOrigin, .usesFontLeading],
-				attributes: [
-					NSFontAttributeName: Font.messageLabel
-				],
-				context: nil
-			)
-			height += ceil(boundingRect.height)
-			
+      
+      height += message.height(
+        width: width - Metric.messageLabelLeft - Metric.messageLabelRight,
+        font: Font.messageLabel,
+        numberOfLines: isMessageTrimmed ? 3 : 0
+      )
 		} else {
 			
 		}
@@ -132,7 +123,11 @@ final class PostCardCell: UICollectionViewCell {
 		return CGSize(width: width, height: height)
 	}
 	
-	func configure(post: Post) {
+  /// 셀을 설정합니다.
+  ///
+  /// - parameter post: Post 인스턴스
+  /// - parameter isMessageTrimmed: 메시지 라벨 높이를 제한할 것인지를 나타냅니다.
+  func configure(post: Post, isMessageTrimmed: Bool) {
 		self.backgroundColor = .white
     self.post = post
 		self.userPhotoView.setImage(with: post.userPhotoID)
@@ -141,6 +136,7 @@ final class PostCardCell: UICollectionViewCell {
     self.likeButton.isSelected = post.isLiked
     self.likeCountLabel.text = self.likeCountLabelText(with: post.likeCount!)
     self.messageLabel.text = post.message
+    self.messageLabel.numberOfLines = isMessageTrimmed ? 3 : 0
 		self.setNeedsLayout()	// layoutSubviews 호출
 //		self.layoutIfNeeded()// layoutSubviews 호출
 	}

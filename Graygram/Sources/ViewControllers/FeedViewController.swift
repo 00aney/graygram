@@ -136,6 +136,8 @@ class FeedViewController: UIViewController {
     self.viewMode = .card
   }
   
+  //#selector 호출은 동적으로 이루어짐. fileprivate 는 런타임에 접근 못함. 그래서 dynamic 붙임.
+  // objective-c 와 런타임을 공유하는 메소드라 보면 됨.
 	fileprivate dynamic func refreshControlDidChangeValue() {
     self.loadFeed(paging: .refresh)
 	}
@@ -222,7 +224,7 @@ extension FeedViewController: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath)
         as! PostCardCell
       let post = self.posts[indexPath.item]
-      cell.configure(post: post)
+      cell.configure(post: post, isMessageTrimmed: false)
       return cell
     case .tile:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tileCell", for: indexPath)
@@ -273,7 +275,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     let post = self.posts[indexPath.item]
     switch self.viewMode {
     case .card:
-      return PostCardCell.size(width: collectionView.width, post: post)
+      return PostCardCell.size(width: collectionView.width, post: post, isMessageTrimmed: true)
       
     case .tile:
       let cellWidth = round((collectionView.width - Metric.tileCellSpacing * (3-1)) / 3)
@@ -320,4 +322,11 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
 			return CGSize(width: collectionView.width, height: 44)
 		}
 	}
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let post = self.posts[indexPath.item]
+    let postViewController = PostViewController(post: post)
+    self.navigationController?.pushViewController(postViewController, animated: true)
+  }
+  
 }
