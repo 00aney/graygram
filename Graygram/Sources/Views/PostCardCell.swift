@@ -8,7 +8,6 @@
 
 import UIKit
 
-import Alamofire
 import SnapKit
 import ManualLayout
 
@@ -223,17 +222,12 @@ final class PostCardCell: UICollectionViewCell {
   
   func like() {
     guard let post = self.post else { return }
-
     NotificationCenter.default.post(name: .postDidLike, object: self, userInfo: ["postID": post.id])
-    
-    let urlString = "https://api.graygram.com/posts/\(post.id!)/likes"
-    Alamofire.request(urlString, method: .post).responseJSON { response in
+    PostService.like(postID: post.id) { response in
       switch response.result {
       case .success:
-        print("좋아요 요청 성공")
-        
-      case .failure(let error):
-        print("좋아요 요청 실패 \(error)")
+        print("좋아요 성공")
+      case .failure:
         NotificationCenter.default.post(name: .postDidUnlike, object: self, userInfo: ["postID": post.id])
       }
     }
@@ -241,17 +235,12 @@ final class PostCardCell: UICollectionViewCell {
   
   func unlike() {
     guard let post = self.post else { return }
-    
     NotificationCenter.default.post(name: .postDidUnlike, object: self, userInfo: ["postID": post.id])
-    
-    let urlString = "https://api.graygram.com/posts/\(post.id!)/likes"
-    Alamofire.request(urlString, method: .delete).responseJSON { response in
+    PostService.unlike(postID: post.id) { response in
       switch response.result {
       case .success:
-        print("좋아요 취소 요청 성공")
-        
-      case .failure(let error):
-        print("좋아요 취소 요청 실패 \(error)")
+        print("좋아요 취소 성공")
+      case .failure:
         NotificationCenter.default.post(name: .postDidLike, object: self, userInfo: ["postID": post.id])
       }
     }

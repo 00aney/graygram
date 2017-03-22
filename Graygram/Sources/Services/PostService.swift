@@ -65,17 +65,32 @@ struct PostService {
     )
   }
   
+  
+  /// 미션
+  /// 1. like()와 unlike() 구현하기
+  /// 2. PostCardCell에서 PostService.like() PostService.unlike() 사용하도록 리팩토링
+  /// 3. 주의 : self를 약한 참조로 넘기기!
+  /// 4. PostCardCell에서 import Alamofire 제거
   static func like(postID: Int, completion: @escaping (DataResponse<Void>) -> Void) {
-    // 미션
-    // 1. like()와 unlike() 구현하기
-    // 2. PostCardCell에서 PostService.like() PostService.unlike() 사용하도록 리팩토링
-    // 3. 주의 : self를 약한 참조로 넘기기!
-    // 4. PostCardCell에서 import Alamofire 제거
-    
+    let urlString = "https://api.graygram.com/posts/\(postID)/likes"
+    Alamofire.request(urlString, method: .post).responseJSON { response in
+      let newResponse: DataResponse<Void> = response
+        .flatMap { value in
+          return .success(Void())
+        }
+      completion(newResponse)
+    }
   }
   
   static func unlike(postID: Int, completion: @escaping (DataResponse<Void>) -> Void) {
-    
+    let urlString = "https://api.graygram.com/posts/\(postID)/likes"
+    Alamofire.request(urlString, method: .delete).responseJSON { response in
+      let newResponse: DataResponse<Void> = response
+        .flatMap { value in
+          return .success(Void())
+      }
+      completion(newResponse)
+    }
   }
   
 }

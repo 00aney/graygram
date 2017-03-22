@@ -40,7 +40,6 @@ class FeedViewController: UIViewController {
   }
 	
 	
-	
 	// MARK: View Life Cycle
 	
 	override func viewDidLoad() {
