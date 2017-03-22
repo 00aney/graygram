@@ -10,8 +10,12 @@ import UIKit
 
 final class PostTileCell: UICollectionViewCell {
   
+  fileprivate let photoView = UIImageView(frame: .zero)
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
+    self.photoView.backgroundColor = .lightGray
+    self.contentView.addSubview(self.photoView)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -19,18 +23,17 @@ final class PostTileCell: UICollectionViewCell {
   }
   
   func configure(post: Post) {
-    // TODO: 구현
+    self.photoView.setImage(with: post.photoID)
   }
   
   class func size(width: CGFloat, post: Post) -> CGSize {
-    // TODO: 구현하기
-    return CGSize(width: 0, height: 0)
+    return CGSize(width: width, height: width)
   }
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    // TODO: photoView가 꽉차도록 구현하기
-    
+    self.photoView.frame = self.contentView.bounds
+//    self.photoView.frame = CGRect(x: 0, y: 0, width: self.contentView.width, height: self.contentView.height)
   }
   
 }

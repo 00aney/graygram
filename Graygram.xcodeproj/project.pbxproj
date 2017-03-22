@@ -35,6 +35,7 @@
 		BD01E4071E80135100561915 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4061E80135100561915 /* AuthService.swift */; };
 		BD55DE231E82911A00A44B40 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE221E82911A00A44B40 /* PostService.swift */; };
 		BD55DE251E82A3A500A44B40 /* PostTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE241E82A3A500A44B40 /* PostTileCell.swift */; };
+		BD55DE271E82AAD500A44B40 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE261E82AAD500A44B40 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		BD4C51601E5DA96000C9C4B7 /* Graygram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graygram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD55DE221E82911A00A44B40 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BD55DE241E82A3A500A44B40 /* PostTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTileCell.swift; sourceTree = "<group>"; };
+		BD55DE261E82AAD500A44B40 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				BD01E3D91E7FF44900561915 /* MainTabBarController.swift */,
 				BD01E3DA1E7FF44900561915 /* PostEditorViewController.swift */,
 				BD01E3DB1E7FF44900561915 /* SplashViewController.swift */,
+				BD55DE261E82AAD500A44B40 /* PostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				BD01E3EA1E7FF44900561915 /* CropViewController.swift in Sources */,
 				BD01E3E81E7FF44900561915 /* UIImage+Grayscaled.swift in Sources */,
 				BD01E3EC1E7FF44900561915 /* LoginViewController.swift in Sources */,
+				BD55DE271E82AAD500A44B40 /* PostViewController.swift in Sources */,
 				BD01E3FE1E80027300561915 /* DataResponse+MapResult.swift in Sources */,
 				BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
 				BD01E3E61E7FF44900561915 /* Post.swift in Sources */,

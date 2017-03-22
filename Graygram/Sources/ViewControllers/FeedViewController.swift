@@ -8,13 +8,26 @@
 
 import UIKit
 
+enum FeedViewMode {
+  case card
+  case tile
+}
+
 class FeedViewController: UIViewController {
 	
+  // MARK: Constants
+  
+  fileprivate struct Metric {
+    static let tileCellSpacing = CGFloat(3)
+  }
+  
+  
 	// MARK: Properties
 	
 	var posts: [Post] = []
 	var nextURLString: String?
 	var isLoading: Bool = false
+  var viewMode: FeedViewMode = .tile
 	
 	
 	// MARK: UI
@@ -50,6 +63,7 @@ class FeedViewController: UIViewController {
 		self.collectionView.dataSource = self
 		self.collectionView.delegate = self
 		self.collectionView.register(PostCardCell.self, forCellWithReuseIdentifier: "postCell")
+    self.collectionView.register(PostTileCell.self, forCellWithReuseIdentifier: "tileCell")
 		self.collectionView.register(
 			CollectionActivityIndicatorView.self,
 			forSupplementaryViewOfKind: UICollectionElementKindSectionFooter,
@@ -161,13 +175,20 @@ extension FeedViewController: UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell",
-		                                              for: indexPath
-		) as! PostCardCell
-		
-		let post = self.posts[indexPath.item]
-		cell.configure(post: post)
-		return cell
+    switch self.viewMode {
+    case .card:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath)
+        as! PostCardCell
+      let post = self.posts[indexPath.item]
+      cell.configure(post: post)
+      return cell
+    case .tile:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tileCell", for: indexPath)
+        as! PostTileCell
+      let post = self.posts[indexPath.item]
+      cell.configure(post: post)
+      return cell
+    }
 	}
 	
 	//MARK: CollectionView Supplementary..
@@ -207,16 +228,47 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
 		layout collectionViewLayout: UICollectionViewLayout,
 		sizeForItemAt indexPath: IndexPath
 	) -> CGSize {
-		let post = self.posts[indexPath.item]
-		return PostCardCell.size(width: collectionView.width, post: post)
+    let post = self.posts[indexPath.item]
+    switch self.viewMode {
+    case .card:
+      return PostCardCell.size(width: collectionView.width, post: post)
+      
+    case .tile:
+      let cellWidth = round((collectionView.width - Metric.tileCellSpacing * (3-1)) / 3)
+      return PostTileCell.size(width: cellWidth, post: post)
+    }
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+    switch self.viewMode {
+    case .card:
+      return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+      
+    case .tile:
+      return .zero
+    }
 	}
+  
+  //가로간격
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    switch self.viewMode {
+    case .card:
+      return 0
+      
+    case .tile:
+      return Metric.tileCellSpacing
+    }
+  }
 	
+  //세로간격
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 15
+    switch self.viewMode {
+    case .card:
+      return 15
+      
+    case .tile:
+      return Metric.tileCellSpacing
+    }
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
