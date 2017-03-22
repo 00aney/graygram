@@ -27,11 +27,34 @@ class FeedViewController: UIViewController {
 	var posts: [Post] = []
 	var nextURLString: String?
 	var isLoading: Bool = false
-  var viewMode: FeedViewMode = .tile
+  var viewMode: FeedViewMode = .card {
+    didSet {
+      switch self.viewMode {
+      case .card:
+        self.navigationItem.leftBarButtonItem = self.tileButtonItem
+        
+      case .tile:
+        self.navigationItem.leftBarButtonItem = self.cardButtonItem
+      }
+      self.collectionView.reloadData()
+    }
+  }
 	
 	
 	// MARK: UI
 	
+  fileprivate let tileButtonItem = UIBarButtonItem(
+    image: UIImage(named: "icon-tile"),
+    style: .plain,
+    target: nil,
+    action: nil
+  )
+  fileprivate let cardButtonItem = UIBarButtonItem(
+    image: UIImage(named: "icon-card"),
+    style: .plain,
+    target: nil,
+    action: nil
+  )
 	let refreshControl = UIRefreshControl()
 	let collectionView = UICollectionView(
 		frame: .zero,
@@ -57,8 +80,18 @@ class FeedViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+//    self.navigationController?.navigationBar.tintColor = .black
+    //부분 틴트칼라 수정
+    
+    self.navigationItem.leftBarButtonItem = self.tileButtonItem
+    self.tileButtonItem.target = self
+    self.tileButtonItem.action = #selector(tileButtonItemDidTap)
+    self.cardButtonItem.target = self
+    self.cardButtonItem.action = #selector(cardButtonItemDidTap)
+    
 		self.refreshControl.addTarget(self, action: #selector(refreshControlDidChangeValue), for: .valueChanged)
 		self.collectionView.backgroundColor = .white
+    self.collectionView.alwaysBounceVertical = true
 		self.collectionView.frame = self.view.bounds
 		self.collectionView.dataSource = self
 		self.collectionView.delegate = self
@@ -94,7 +127,15 @@ class FeedViewController: UIViewController {
   deinit {
     NotificationCenter.default.removeObserver(self) //옵저버 전부 해제
   }
-	
+  
+  fileprivate dynamic func tileButtonItemDidTap() {
+    self.viewMode = .tile
+  }
+  
+  fileprivate dynamic func cardButtonItemDidTap() {
+    self.viewMode = .card
+  }
+  
 	fileprivate dynamic func refreshControlDidChangeValue() {
     self.loadFeed(paging: .refresh)
 	}
@@ -119,6 +160,7 @@ class FeedViewController: UIViewController {
         }
         self.nextURLString = feed.nextURLString
         self.collectionView.reloadData()
+        self.scrollViewDidScroll(self.collectionView)
         
       case .failure(let error):
         print("피드 요청 실패: \(error)")

@@ -22,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
+    //apperance()는 어떤 뷰 클래스에서 모든 애플리케이션 내에서 사용되는 공통의 특성을 설정
+    UINavigationBar.appearance().tintColor = .black
+    UIBarButtonItem.appearance().tintColor = .black
+    UITabBar.appearance().tintColor = .black
+    
     //UIWindow는 실행될 때 무조건 뷰 하나를 가지고 있어야한다.
 		let window = UIWindow(frame: UIScreen.main.bounds)
 		window.backgroundColor = .white
