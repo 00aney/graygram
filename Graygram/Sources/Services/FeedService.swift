@@ -30,7 +30,6 @@ struct FeedService {
       }
       completion(newResponse)
     }
-    
   }
   
 }

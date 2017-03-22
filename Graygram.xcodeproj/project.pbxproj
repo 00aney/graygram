@@ -33,6 +33,7 @@
 		BD01E4031E800DAD00561915 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4021E800DAD00561915 /* Feed.swift */; };
 		BD01E4051E80102B00561915 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4041E80102B00561915 /* Paging.swift */; };
 		BD01E4071E80135100561915 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4061E80135100561915 /* AuthService.swift */; };
+		BD55DE231E82911A00A44B40 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE221E82911A00A44B40 /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		BD01E4041E80102B00561915 /* Paging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
 		BD01E4061E80135100561915 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BD4C51601E5DA96000C9C4B7 /* Graygram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graygram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD55DE221E82911A00A44B40 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				BD01E3F61E7FF5F200561915 /* UserService.swift */,
 				BD01E4001E800CFE00561915 /* FeedService.swift */,
 				BD01E4061E80135100561915 /* AuthService.swift */,
+				BD55DE221E82911A00A44B40 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				BD01E3FE1E80027300561915 /* DataResponse+MapResult.swift in Sources */,
 				BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
 				BD01E3E61E7FF44900561915 /* Post.swift in Sources */,
+				BD55DE231E82911A00A44B40 /* PostService.swift in Sources */,
 				BD01E3F71E7FF5F200561915 /* UserService.swift in Sources */,
 				BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */,
 				BD01E3EF1E7FF44900561915 /* SplashViewController.swift in Sources */,

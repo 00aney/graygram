@@ -8,8 +8,6 @@
 
 import UIKit
 
-import Alamofire
-
 final class PostEditorViewController: UIViewController {
 
   // MARK: Properties
@@ -112,62 +110,39 @@ final class PostEditorViewController: UIViewController {
   }
   
   func doneButtonItemDidTap() {
-    let urlString = "https://api.graygram.com/posts"
-    let headers: HTTPHeaders = [
-      "Accept": "application/json",
-    ]
     
     self.progressView.isHidden = false
     
-    Alamofire.upload(
-      multipartFormData: { formData in
-        if let imageData = UIImageJPEGRepresentation(self.image, 1) {
-          formData.append(imageData, withName: "photo", fileName: "photo.jpg", mimeType: "image/jpeg")
-        }
-        if let messageData = self.message?.data(using: .utf8) {
-          formData.append(messageData, withName: "message")
-        }
+    PostService.create(
+      image: self.image,
+      message: self.message,
+      progress: { [weak self] progress in
+        self?.progressView.progress = Float(progress.completedUnitCount) / Float(progress.totalUnitCount)
+        // self에 대한 참조가 PostService에 대한 참조로 넘어간다 +1
+        // 화면을 닫으면 -1이 되는데, 도중에 취소를 해버려도 +1
+        // 해결방법 : 약한 참조 사용 [weak self] - - - - ->(o), -------->(x)
+        // 레퍼런스 카운트가 증가되지 않는다.
+        // 약한 참조를 쓰면, self가 에러가 난다. 왜냐하면
+        // self: PostEditorViewController? 옵셔널이기 때문이다.
+        // 화면이 닫혔을 경우 nil이 된다. self?로 고친다.
+        // 클로저앞에 [ ] 를 캡쳐한다고 한다.
       },
-      to: urlString,
-      headers: headers,
-      encodingCompletion: { result in
-        switch result {
-        case .success(let request, _, _):
-          print("인코딩 성공")
-          request // API 요청
-            .uploadProgress { progress in
-              print("\(progress.completedUnitCount) / \(progress.totalUnitCount)")
-              self.progressView.progress = Float(progress.completedUnitCount) / Float(progress.totalUnitCount)
-            }
-            .validate(statusCode: 200..<400)
-            .responseJSON { response in
-            switch response.result {
-            case .success(let value):
-              print("업로드 성공: \(value)")
-              if let json = value as? [String: Any], let post = Post(JSON: json) {
-                NotificationCenter.default.post(
-                  name: .postDidCreate,
-                  object: self,
-                  userInfo: ["post": post]
-                )
-              }
-              self.dismiss(animated: true, completion: nil)
-
-            case .failure(let error):
-              print("업로드 실패: \(error)")
-              self.progressView.isHidden = true
-              self.progressView.progress = 0
-            }
-          }
+      completion: { [weak self] response in
+        guard let `self` = self else { return }   // ``백틱으로 self를 다시 정의 Strong Self
+        switch response.result {
+        case .success(let post):
+          NotificationCenter.default.post(
+            name: .postDidCreate,
+            object: self,   // 이 경우는 옵셔널 체이닝을 사용할 수 없다. 그래서 Strong Self하게 만들어 준다.
+            userInfo: ["post": post]
+          )
+          self.dismiss(animated: true, completion: nil)
           
         case .failure(let error):
-          print("인코딩 실패: \(error)")
-          self.progressView.isHidden = true
-          self.progressView.progress = 0
+          print("업로드 실패: \(error)")
         }
       }
     )
-    // multiPartFormData, multiFormData 찾아보기
   }
   
 }

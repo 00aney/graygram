@@ -30,3 +30,7 @@ extension DataResponse {
   }
   
 }
+
+
+// self 가 old response
+// Result<T> 에서 T에서 제네릭 타입이 정해지고, 새로운 response 가 리턴
