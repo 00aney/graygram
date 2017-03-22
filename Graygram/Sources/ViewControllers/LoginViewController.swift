@@ -8,8 +8,6 @@
 
 import UIKit
 
-import Alamofire
-
 final class LoginViewController: UIViewController {
 	
 	// MARK: UI
@@ -126,54 +124,35 @@ final class LoginViewController: UIViewController {
 		self.loginButton.isEnabled = false
 		self.loginButton.alpha = 0.4
 		
-		let urlString = "https://api.graygram.com/login/username"
-		let parameters: Parameters = [
-			"username": username,
-			"password": password,
-		]
-		let headers: HTTPHeaders = [
-			"Accept": "application/json",		// default: text/html
-		]
-		Alamofire.request(urlString, method: .post, parameters: parameters, headers: headers)
-			.validate(statusCode: 200..<400)
-			.responseJSON { response in
-				switch response.result {
-				case .success(let value):
-					print("로그인 성공! \(value)")
-					AppDelegate.instance?.presentMainScreen()
-					
-				case .failure(let error):
-					self.usernameTextField.isEnabled = true
-					self.passwordTextField.isEnabled = true
-					self.loginButton.isEnabled = true
-					self.loginButton.alpha = 1
-					
-					if let data = response.data,
-						let json = try? JSONSerialization.jsonObject(with: data), //	실패하면 nil 반환
-						let dict = json as? [String: Any],
-						let errorInfo = dict["error"] as? [String: Any] {
-						
-						let field = errorInfo["field"] as? String
-						if field == "username" {
-							self.usernameTextField.becomeFirstResponder()
-							self.usernameTextField.textColor = .red
-						} else if field == "password" {
-							self.passwordTextField.becomeFirstResponder()
-							self.passwordTextField.textColor = .red
-						}
-					}
-					print("로그인 실패 ㅠㅠ \(error)")
-					/*
-						Optional({
-							error =     {
-								field = username;
-								message = "User not registered";
-							};
-						})
-					*/
-				}
-			}
+    AuthService.login(username: username, password: password) { response in
+      switch response.result {
+      case .success:
+        print("로그인 성공!")
+        AppDelegate.instance?.presentMainScreen()
+        
+      case .failure(let error):
+        self.usernameTextField.isEnabled = true
+        self.passwordTextField.isEnabled = true
+        self.loginButton.isEnabled = true
+        self.loginButton.alpha = 1
+        
+        if let data = response.data,
+          let json = try? JSONSerialization.jsonObject(with: data), //	실패하면 nil 반환
+          let dict = json as? [String: Any],
+          let errorInfo = dict["error"] as? [String: Any] {
+          
+          let field = errorInfo["field"] as? String
+          if field == "username" {
+            self.usernameTextField.becomeFirstResponder()
+            self.usernameTextField.textColor = .red
+          } else if field == "password" {
+            self.passwordTextField.becomeFirstResponder()
+            self.passwordTextField.textColor = .red
+          }
+        }
+        print("로그인 실패 ㅠㅠ \(error)")
+      }
+    }
 	}
-
 	//알라모파이어는 기본적으로 응답만 받으면 성공으로 인식하기 때문에 validate를 써줘야 한다.
 }

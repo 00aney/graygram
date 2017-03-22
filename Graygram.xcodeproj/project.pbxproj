@@ -25,6 +25,14 @@
 		BD01E3F11E7FF44900561915 /* PostCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DE1E7FF44900561915 /* PostCardCell.swift */; };
 		BD01E3F21E7FF44900561915 /* PostEditorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3DF1E7FF44900561915 /* PostEditorImageCell.swift */; };
 		BD01E3F31E7FF44900561915 /* PostEditorMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3E01E7FF44900561915 /* PostEditorMessageCell.swift */; };
+		BD01E3F71E7FF5F200561915 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3F61E7FF5F200561915 /* UserService.swift */; };
+		BD01E3F91E7FF83000561915 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3F81E7FF83000561915 /* User.swift */; };
+		BD01E3FC1E8000E700561915 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3FB1E8000E700561915 /* MappingError.swift */; };
+		BD01E3FE1E80027300561915 /* DataResponse+MapResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E3FD1E80027300561915 /* DataResponse+MapResult.swift */; };
+		BD01E4011E800CFE00561915 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4001E800CFE00561915 /* FeedService.swift */; };
+		BD01E4031E800DAD00561915 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4021E800DAD00561915 /* Feed.swift */; };
+		BD01E4051E80102B00561915 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4041E80102B00561915 /* Paging.swift */; };
+		BD01E4071E80135100561915 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E4061E80135100561915 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,16 @@
 		BD01E3DF1E7FF44900561915 /* PostEditorImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorImageCell.swift; sourceTree = "<group>"; };
 		BD01E3E01E7FF44900561915 /* PostEditorMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostEditorMessageCell.swift; sourceTree = "<group>"; };
 		BD01E3E21E7FF44900561915 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD01E3F61E7FF5F200561915 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		BD01E3F81E7FF83000561915 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD01E3FA1E7FF9F300561915 /* GenericPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericPlayground.playground; sourceTree = "<group>"; };
+		BD01E3FB1E8000E700561915 /* MappingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
+		BD01E3FD1E80027300561915 /* DataResponse+MapResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataResponse+MapResult.swift"; sourceTree = "<group>"; };
+		BD01E3FF1E80057E00561915 /* ResultPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ResultPlayground.playground; sourceTree = "<group>"; };
+		BD01E4001E800CFE00561915 /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		BD01E4021E800DAD00561915 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		BD01E4041E80102B00561915 /* Paging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
+		BD01E4061E80135100561915 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BD4C51601E5DA96000C9C4B7 /* Graygram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graygram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				BD01E3CE1E7FF44900561915 /* AppDelegate.swift */,
+				BD01E3FB1E8000E700561915 /* MappingError.swift */,
+				BD01E4041E80102B00561915 /* Paging.swift */,
+				BD01E3F51E7FF5B600561915 /* Services */,
 				BD01E3CF1E7FF44900561915 /* Models */,
 				BD01E3D51E7FF44900561915 /* ViewControllers */,
 				BD01E3DC1E7FF44900561915 /* Views */,
@@ -116,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				BD01E3D01E7FF44900561915 /* Post.swift */,
+				BD01E3F81E7FF83000561915 /* User.swift */,
+				BD01E4021E800DAD00561915 /* Feed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +149,7 @@
 				BD01E3D21E7FF44900561915 /* String+BoundingRect.swift */,
 				BD01E3D31E7FF44900561915 /* UIImage+Grayscaled.swift */,
 				BD01E3D41E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift */,
+				BD01E3FD1E80027300561915 /* DataResponse+MapResult.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,9 +186,21 @@
 			path = "Supporing Files";
 			sourceTree = "<group>";
 		};
+		BD01E3F51E7FF5B600561915 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD01E3F61E7FF5F200561915 /* UserService.swift */,
+				BD01E4001E800CFE00561915 /* FeedService.swift */,
+				BD01E4061E80135100561915 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BD4C51571E5DA96000C9C4B7 = {
 			isa = PBXGroup;
 			children = (
+				BD01E3FF1E80057E00561915 /* ResultPlayground.playground */,
+				BD01E3FA1E7FF9F300561915 /* GenericPlayground.playground */,
 				BD01E3C81E7FF44900561915 /* Graygram */,
 				BD4C51611E5DA96000C9C4B7 /* Products */,
 				5C0D0C44FDF12130234E9254 /* Pods */,
@@ -303,17 +339,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD01E3F21E7FF44900561915 /* PostEditorImageCell.swift in Sources */,
+				BD01E4071E80135100561915 /* AuthService.swift in Sources */,
+				BD01E3FC1E8000E700561915 /* MappingError.swift in Sources */,
 				BD01E3E51E7FF44900561915 /* AppDelegate.swift in Sources */,
 				BD01E3F01E7FF44900561915 /* CollectionActivityIndicatorView.swift in Sources */,
 				BD01E3F11E7FF44900561915 /* PostCardCell.swift in Sources */,
 				BD01E3EE1E7FF44900561915 /* PostEditorViewController.swift in Sources */,
 				BD01E3E71E7FF44900561915 /* String+BoundingRect.swift in Sources */,
 				BD01E3ED1E7FF44900561915 /* MainTabBarController.swift in Sources */,
+				BD01E3F91E7FF83000561915 /* User.swift in Sources */,
+				BD01E4051E80102B00561915 /* Paging.swift in Sources */,
+				BD01E4011E800CFE00561915 /* FeedService.swift in Sources */,
+				BD01E4031E800DAD00561915 /* Feed.swift in Sources */,
 				BD01E3EA1E7FF44900561915 /* CropViewController.swift in Sources */,
 				BD01E3E81E7FF44900561915 /* UIImage+Grayscaled.swift in Sources */,
 				BD01E3EC1E7FF44900561915 /* LoginViewController.swift in Sources */,
+				BD01E3FE1E80027300561915 /* DataResponse+MapResult.swift in Sources */,
 				BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
 				BD01E3E61E7FF44900561915 /* Post.swift in Sources */,
+				BD01E3F71E7FF5F200561915 /* UserService.swift in Sources */,
 				BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */,
 				BD01E3EF1E7FF44900561915 /* SplashViewController.swift in Sources */,
 				BD01E3F31E7FF44900561915 /* PostEditorMessageCell.swift in Sources */,

@@ -8,8 +8,6 @@
 
 import UIKit
 
-import Alamofire
-
 class FeedViewController: UIViewController {
 	
 	// MARK: Properties
@@ -85,57 +83,34 @@ class FeedViewController: UIViewController {
   }
 	
 	fileprivate dynamic func refreshControlDidChangeValue() {
-		self.loadFeed(isMore: false)
+    self.loadFeed(paging: .refresh)
 	}
 
-	func loadFeed(isMore: Bool) {
+  func loadFeed(paging: Paging) {
 		// 중복 로딩 방지
 		guard !self.isLoading else { return }
-		
-		let urlString: String
-		if !isMore {
-			// Refresh
-			urlString = "https://api.graygram.com/feed?limit=5"
-		} else if let nextURLString = self.nextURLString {
-			// 더보기 요청
-			urlString = nextURLString
-		} else {
-			// 이도 저도 아닌 경우 아무 일도 하지 않음
-			return
-		}
-		
 		self.isLoading = true
-		
-		Alamofire.request(urlString).responseJSON{ response in
-			self.isLoading = false
-			self.refreshControl.endRefreshing()
-			
-			switch response.result {
-			case .success(let value):
-				guard let json = value as? [String: Any] else { break }
-				if let data = json["data"] as? [[String: Any]] {
-					let newPosts = [Post](JSONArray: data) ?? []
-					if !isMore {
-						self.posts = newPosts
-					} else {
-						self.posts.append(contentsOf: newPosts)
-						// self.posts += newPosts
-					}
-					self.collectionView.reloadData()
-				}
-				//더보기
-				if let paging = json["paging"] as? [String: Any] {
-					self.nextURLString = paging["next"] as? String
-				} else {
-					self.nextURLString = nil
-				}
-				
-			case .failure(let error):
-				print("요청 실패 ㅠㅠ \(error)")
-				
-			}
-		}
-
+    
+    FeedService.feed(paging: paging) { response in
+      self.isLoading = false
+      self.refreshControl.endRefreshing()
+      
+      switch response.result {
+      case .success(let feed):
+        switch paging {
+        case .refresh:
+          self.posts = feed.posts
+          
+        case .next:
+          self.posts.append(contentsOf: feed.posts)
+        }
+        self.nextURLString = feed.nextURLString
+        self.collectionView.reloadData()
+        
+      case .failure(let error):
+        print("피드 요청 실패: \(error)")
+      }
+    }
 	}
   
   
@@ -222,11 +197,11 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
 		let scrollBottom = scrollView.contentOffset.y + scrollView.height
 		let scrollHeight = scrollView.contentSize.height
 		
-		if scrollBottom >= scrollHeight - 200 && scrollView.contentSize.height > 0 {
-			self.loadFeed(isMore: true)
-		}
-		
-	}
+    if let nextURLString = self.nextURLString,
+      scrollBottom >= scrollHeight - 200 && scrollView.contentSize.height > 0 {
+      self.loadFeed(paging: .next(nextURLString))
+    }
+  }
 	
 	func collectionView(
 		_ collectionView: UICollectionView,
