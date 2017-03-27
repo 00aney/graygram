@@ -36,6 +36,7 @@
 		BD55DE231E82911A00A44B40 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE221E82911A00A44B40 /* PostService.swift */; };
 		BD55DE251E82A3A500A44B40 /* PostTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE241E82A3A500A44B40 /* PostTileCell.swift */; };
 		BD55DE271E82AAD500A44B40 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE261E82AAD500A44B40 /* PostViewController.swift */; };
+		BDB53A6B1E89393500B463B3 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB53A6A1E89393500B463B3 /* URLNavigationMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BD55DE221E82911A00A44B40 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BD55DE241E82A3A500A44B40 /* PostTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTileCell.swift; sourceTree = "<group>"; };
 		BD55DE261E82AAD500A44B40 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		BDB53A6A1E89393500B463B3 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLNavigationMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				BD01E3CE1E7FF44900561915 /* AppDelegate.swift */,
+				BDB53A6A1E89393500B463B3 /* URLNavigationMap.swift */,
 				BD01E3FB1E8000E700561915 /* MappingError.swift */,
 				BD01E4041E80102B00561915 /* Paging.swift */,
 				BD01E3F51E7FF5B600561915 /* Services */,
@@ -367,6 +370,7 @@
 				BD01E3FE1E80027300561915 /* DataResponse+MapResult.swift in Sources */,
 				BD01E3E91E7FF44900561915 /* UIImageView+SetImageWithPhotoID.swift in Sources */,
 				BD01E3E61E7FF44900561915 /* Post.swift in Sources */,
+				BDB53A6B1E89393500B463B3 /* URLNavigationMap.swift in Sources */,
 				BD55DE231E82911A00A44B40 /* PostService.swift in Sources */,
 				BD01E3F71E7FF5F200561915 /* UserService.swift in Sources */,
 				BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */,

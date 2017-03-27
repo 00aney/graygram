@@ -10,6 +10,7 @@ import UIKit
 
 import Kingfisher
 import SnapKit
+import URLNavigator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
+    URLNavigationMap.initialize()
+    
     //apperance()는 어떤 뷰 클래스에서 모든 애플리케이션 내에서 사용되는 공통의 특성을 설정
     UINavigationBar.appearance().tintColor = .black
     UIBarButtonItem.appearance().tintColor = .black
@@ -71,6 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     options: [UIApplicationOpenURLOptionsKey : Any] = [:]
     ) -> Bool {
     // 앱이 백그라운드에 있다가 URL을 통해 foreground로 전환된 경우
+    Navigator.present(url)
+    
     return false
   }
 }

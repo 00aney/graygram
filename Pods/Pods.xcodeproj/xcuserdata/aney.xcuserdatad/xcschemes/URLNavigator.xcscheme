@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1430CACE04BC945A0C4A4353FAD73C5F'
-               BlueprintName = 'SnapKit'
+               BlueprintIdentifier = 'D0B333AC9FFDF68B9BFD708E6EC99056'
+               BlueprintName = 'URLNavigator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SnapKit.framework'>
+               BuildableName = 'URLNavigator.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

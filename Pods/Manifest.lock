@@ -4,6 +4,7 @@ PODS:
   - ManualLayout (1.3.0)
   - ObjectMapper (2.2.3)
   - SnapKit (3.2.0)
+  - URLNavigator (1.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - ManualLayout (~> 1.3)
   - ObjectMapper (~> 2.2)
   - SnapKit (~> 3.2)
+  - URLNavigator (~> 1.1)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   ManualLayout: 68ac8cfa6b5f656f7a9fadec3730208b95986880
   ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  URLNavigator: 269e73ee727a7cabfa8e510a312bac3884325cc3
 
-PODFILE CHECKSUM: f50c10aee72b063c22d43902edcabadc47940aed
+PODFILE CHECKSUM: 801890efd2c75fa75392e75cf15cdc23a6dae6d5
 
 COCOAPODS: 1.2.0

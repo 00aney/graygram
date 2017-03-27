@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7ECBE3BBA54364CBC3643999291B55E"
+               BlueprintIdentifier = "60D4EC4CEBFF500772C9F4D97D9C41DE"
                BuildableName = "Pods_Graygram.framework"
                BlueprintName = "Pods-Graygram"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7ECBE3BBA54364CBC3643999291B55E"
+            BlueprintIdentifier = "60D4EC4CEBFF500772C9F4D97D9C41DE"
             BuildableName = "Pods_Graygram.framework"
             BlueprintName = "Pods-Graygram"
             ReferencedContainer = "container:Pods.xcodeproj">

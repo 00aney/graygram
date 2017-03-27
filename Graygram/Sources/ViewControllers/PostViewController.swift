@@ -8,6 +8,8 @@
 
 import UIKit
 
+import URLNavigator
+
 final class PostViewController: UIViewController {
   
   // MARK: Properties
@@ -142,6 +144,22 @@ final class PostViewController: UIViewController {
   
 }
 
+
+// MARK: - URLNavigable
+
+extension PostViewController: URLNavigable {
+  
+  // URLNavigationMap 
+  convenience init?(
+    url: URLConvertible,    // grgm://post/3
+    values: [String : Any], // ["id": "3"]
+    userInfo: [AnyHashable : Any]?
+  ) {
+    guard let postID = values["id"] as? Int else { return nil }
+    self.init(postID: postID, post: nil)  // convenience init에서는 designated 생성자 반드시 호출
+  }
+  
+}
 
 // MARK: - UICollectionViewDataSource
 
