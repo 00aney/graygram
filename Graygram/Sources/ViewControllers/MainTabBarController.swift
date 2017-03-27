@@ -11,6 +11,7 @@ import UIKit
 final class MainTabBarController: UITabBarController {
   
   let feedViewController = FeedViewController()
+  let settingsViewController = SettingsViewController()
   
   /// 탭바에 업로드 버튼 영역을 만들기 위한 가짜 뷰 컨트롤러
   let fakeViewController = UIViewController()
@@ -24,6 +25,7 @@ final class MainTabBarController: UITabBarController {
     
     self.viewControllers = [
       UINavigationController(rootViewController: self.feedViewController),
+      UINavigationController(rootViewController: self.settingsViewController),
       self.fakeViewController,
     ]
   }

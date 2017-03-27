@@ -37,6 +37,7 @@
 		BD55DE251E82A3A500A44B40 /* PostTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE241E82A3A500A44B40 /* PostTileCell.swift */; };
 		BD55DE271E82AAD500A44B40 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55DE261E82AAD500A44B40 /* PostViewController.swift */; };
 		BDB53A6B1E89393500B463B3 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB53A6A1E89393500B463B3 /* URLNavigationMap.swift */; };
+		BDB53A6D1E89450F00B463B3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB53A6C1E89450F00B463B3 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		BD55DE241E82A3A500A44B40 /* PostTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTileCell.swift; sourceTree = "<group>"; };
 		BD55DE261E82AAD500A44B40 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		BDB53A6A1E89393500B463B3 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLNavigationMap.swift; sourceTree = "<group>"; };
+		BDB53A6C1E89450F00B463B3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				BD01E3DA1E7FF44900561915 /* PostEditorViewController.swift */,
 				BD01E3DB1E7FF44900561915 /* SplashViewController.swift */,
 				BD55DE261E82AAD500A44B40 /* PostViewController.swift */,
+				BDB53A6C1E89450F00B463B3 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				BDB53A6B1E89393500B463B3 /* URLNavigationMap.swift in Sources */,
 				BD55DE231E82911A00A44B40 /* PostService.swift in Sources */,
 				BD01E3F71E7FF5F200561915 /* UserService.swift in Sources */,
+				BDB53A6D1E89450F00B463B3 /* SettingsViewController.swift in Sources */,
 				BD01E3EB1E7FF44900561915 /* FeedViewController.swift in Sources */,
 				BD01E3EF1E7FF44900561915 /* SplashViewController.swift in Sources */,
 				BD01E3F31E7FF44900561915 /* PostEditorMessageCell.swift in Sources */,

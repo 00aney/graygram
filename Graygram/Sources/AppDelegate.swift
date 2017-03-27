@@ -16,6 +16,7 @@ import URLNavigator
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+  var destination: URL?
 
 	class var instance: AppDelegate? {
 		return UIApplication.shared.delegate as? AppDelegate
@@ -43,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		window.rootViewController = splashViewController
 		
 		self.window = window
+    
+    if let url = launchOptions?[.url] as? URL {
+//      Navigator.present(url, wrap: true)
+      self.destination = url
+    }
+    
 		return true
 	}
 
@@ -57,9 +64,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		let navigationController = UINavigationController(rootViewController: feedViewController)
     
     let tabBarController = MainTabBarController()
-////    tabBarController
 //    tabBarController.viewControllers = [navigationController]
 		self.window?.rootViewController = tabBarController
+    
+    if let destination = self.destination {
+      Navigator.present(destination, wrap: true)
+    }
 	}
   
   /* 커스텀 스킴 처리해야할 곳 : 1. 앱딜리게이트 didFinishLaunchingWithOptions , 2. */
@@ -74,8 +84,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     options: [UIApplicationOpenURLOptionsKey : Any] = [:]
     ) -> Bool {
     // 앱이 백그라운드에 있다가 URL을 통해 foreground로 전환된 경우
-    Navigator.present(url)
-    
+    if Navigator.present(url, wrap: true) != nil { // wrap:true -> 네비게이션 바 나옴.
+      return true
+    }
     return false
   }
 }

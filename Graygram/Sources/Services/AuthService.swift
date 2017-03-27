@@ -35,4 +35,14 @@ struct AuthService {
       }
   }
   
+  static func logout() {
+    let storage = HTTPCookieStorage.shared
+    if let cookies = storage.cookies {
+      for cookie in cookies {
+        storage.deleteCookie(cookie)
+        print("쿠키 삭제: \(cookie.name)")
+      }
+    }
+  }
+  
 }

@@ -91,6 +91,27 @@ final class PostViewController: UIViewController {
     
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    if self.navigationController?.viewControllers.count ?? 0 > 1 {
+      // pushed
+      self.navigationItem.leftBarButtonItem = nil
+    } else  if self.presentingViewController != nil { // present  를 사용하여 자기자신을 띄운 뷰컨트롤러를 반환
+      // presented
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+        barButtonSystemItem: .cancel,
+        target: self,
+        action: #selector(cancelButtonItemDidTap)
+      )
+    }
+    
+  }
+  
+  func cancelButtonItemDidTap() {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
   
   // MARK: Notifications
   
