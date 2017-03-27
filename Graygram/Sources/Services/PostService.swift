@@ -65,6 +65,22 @@ struct PostService {
     )
   }
   
+  static func post(id: Int, completion: @escaping (DataResponse<Post>) -> Void) {
+    let urlString = "https://api.graygram.com/posts/\(id)"
+    Alamofire.request(urlString, method: .get)
+      .validate(statusCode: 200..<400)
+      .responseJSON { response in
+        let newResponse: DataResponse<Post> = response.flatMap({ value in
+          if let post = Mapper<Post>().map(JSONObject: value) {
+            return .success(post)
+          } else {
+            return .failure(MappingError(from: self, to: Post.self))
+          }
+        })
+      return completion(newResponse)
+    }
+  }
+  
   
   /// 미션
   /// 1. like()와 unlike() 구현하기

@@ -58,5 +58,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    tabBarController.viewControllers = [navigationController]
 		self.window?.rootViewController = tabBarController
 	}
-	
+  
+  /* 커스텀 스킴 처리해야할 곳 : 1. 앱딜리게이트 didFinishLaunchingWithOptions , 2. */
+  // launchOptions 에서는 딕셔러니가 들어오는데, [UIApplicationLaunchOptionsKey: Any]가 들어있다.
+  // UIApplicationLaunchOptionsKey 의 키는 url, sourceApplication, remoteNotification 등이 있다.
+  // didFinishLaunchingWithOptions이건 앱이 꺼진후 켜질때 실행되는 메소드
+  // 백그라운드에 있을때는 UIApplicationOpenURLOptionsKey 메소드 호출
+  // 즉, didFinishLaunchingWithOptions과 UIApplicationOpenURLOptionsKey 에 처리해줘야 한다.
+  func application(
+    _ app: UIApplication,
+    open url: URL,
+    options: [UIApplicationOpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+    // 앱이 백그라운드에 있다가 URL을 통해 foreground로 전환된 경우
+    return false
+  }
 }
