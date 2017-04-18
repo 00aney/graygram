@@ -244,6 +244,7 @@
 				BD4C515E1E5DA96000C9C4B7 /* Resources */,
 				A2427A2BAB4A45648CA539D3 /* [CP] Embed Pods Frameworks */,
 				A5AD7EA5612EC28652632EDA /* [CP] Copy Pods Resources */,
+				BDB53AF81E8BF32A00B463B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -345,6 +346,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graygram/Pods-Graygram-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BDB53AF81E8BF32A00B463B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" b659e8d99f54902f159954da509be3f920aa3bb3 f3b3f9ced38d65aba5fb23941ea1809fbd12ef5925929f3be31ff081e6113cb8";
 		};
 /* End PBXShellScriptBuildPhase section */
 

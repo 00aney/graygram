@@ -260,4 +260,3 @@ final class PostCardCell: UICollectionViewCell {
 //MVVM : Model View ViewModel
 
 //RxSwift <- RxCocoa <-> UIKit
-//

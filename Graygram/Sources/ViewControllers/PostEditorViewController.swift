@@ -98,6 +98,7 @@ final class PostEditorViewController: UIViewController {
       if keyboardVisibleHeight > 0 {
         let indexPath = IndexPath(row: 1, section: 0)
         self.tableView.scrollToRow(at: indexPath, at: .none, animated: false)
+        
       }
     }
   }
